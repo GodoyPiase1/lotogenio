@@ -1,0 +1,21 @@
+import random
+
+def gerar_jogos_mega(total_jogos=5):
+    dezenas_por_jogo = 6
+    intervalo = (1, 60)
+
+    jogos = []
+    for _ in range(total_jogos):
+        jogo = sorted(random.sample(range(intervalo[0], intervalo[1]+1), dezenas_por_jogo))
+        jogos.append(jogo)
+
+    return jogos
+
+def mostrar_jogos(jogos):
+    for i, jogo in enumerate(jogos, start=1):
+        print(f"Jogo {i:02}: {', '.join(f'{n:02}' for n in jogo)}")
+
+if __name__ == "__main__":
+    print("Gerador de jogos - Mega-Sena")
+    mega_jogos = gerar_jogos_mega(5)  # Gera 5 jogos, pode mudar aqui
+    mostrar_jogos(mega_jogos)
