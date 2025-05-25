@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - LotoGÊNIO</title>
+</head>
+<body>
+  <h2>Digite a senha para acessar o LotoGÊNIO:</h2>
+  <input type="password" id="senha" placeholder="Senha">
+  <button onclick="verificarSenha()">Entrar</button>
+
+  <script>
+    function verificarSenha() {
+      const senha = document.getElementById('senha').value;
+      if (senha === 'lotogenio123') {
+        window.location.href = 'index.html';
+      } else {
+        alert('Senha incorreta!');
+      }
+    }
+  </script>
+</body>
+</html>
